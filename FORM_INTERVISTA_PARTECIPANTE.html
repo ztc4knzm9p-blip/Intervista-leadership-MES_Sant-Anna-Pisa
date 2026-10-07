@@ -279,6 +279,10 @@ th{background:#edf2f0;color:#314f52}
 .fallback-box{display:none;background:#f7f8f5;border:1px solid var(--line);border-radius:10px;padding:12px;margin-top:10px}
 .fallback-box textarea{min-height:180px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
 
+
+.mail-config{margin:16px 0 8px;padding:12px;border:1px solid var(--line);border-radius:10px;background:#faf9f5}
+.mail-config input{margin-top:6px}
+
 </style>
 </head>
 <body>
@@ -287,9 +291,9 @@ th{background:#edf2f0;color:#314f52}
 
 <div class="instructions">
 <b>Come restituire il questionario.</b>
-Compili il modulo fino alla fine. Su telefono o tablet usi <b>“Invia / condividi risposta compilata”</b>: il questionario crea un file <b>.txt</b> contenente i dati inseriti e apre, quando disponibile, il menu di condivisione del dispositivo.
-Su PC, o se la condivisione diretta non è disponibile, utilizzi <b>“Scarica risposta”</b> e alleghi alla mail il file creato. <b>Non inoltri direttamente il file HTML con il normale tasto Condividi del telefono</b>, perché quell’azione invia il modulo originale senza incorporare le risposte digitate.
-Il modulo non invia automaticamente le risposte a servizi esterni.
+Compili il modulo fino alla fine. Su smartphone/tablet usi preferibilmente <b>“Condividi risposta”</b>: il sistema crea il file della risposta e, se supportato dal dispositivo, apre il menu nativo da cui può scegliere Mail, Gmail, Outlook o un’altra app.
+Su PC può usare <b>“Invia con Gmail”</b> oppure <b>“Invia con il programma di posta”</b>: prima viene scaricato il file della risposta, poi si apre una nuova email già predisposta. <b>Il file scaricato deve essere allegato manualmente alla mail</b>, perché i browser non consentono a una pagina web di aggiungere automaticamente allegati a Gmail o ai programmi di posta.
+In alternativa può usare <b>“Scarica risposta”</b>. <b>Non inoltri direttamente la pagina HTML</b>: quella pagina non incorpora le risposte digitate.
 </div>
 <div class="box premessa-box">
 <h2>Premessa</h2>
@@ -322,8 +326,8 @@ Il modulo non invia automaticamente le risposte a servizi esterni.
 <label>Sesso
 <select name="A_Sesso" required>
 <option value="">Seleziona</option>
-<option>Femmina</option>
-<option>Maschio</option>
+<option>Donna</option>
+<option>Uomo</option>
 </select>
 </label>
 
@@ -416,18 +420,21 @@ Il modulo non invia automaticamente le risposte a servizi esterni.
 </div>
 
 <div class="section"><h2>E. Dall'esperienza alle soft skill</h2>
-<p>Partendo dagli episodi appena descritti, selezioni <b>fino a 5</b> soft skill che considera maggiormente rilevanti.</p>
+<p>Partendo dagli episodi appena descritti, selezioni <b>fino a 5</b> competenze relazionali e di leadership che considera maggiormente rilevanti.</p>
 <div class="checks">
-<label class="check skill-check"><input type="checkbox" name="E_SoftSkillsSelezionate" value="Change management e visione strategica" onclick="limitCheckboxGroup(this,5)"> <span><b>1. Change management e visione strategica</b></span></label>
-<label class="check skill-check"><input type="checkbox" name="E_SoftSkillsSelezionate" value="Leadership d'esempio" onclick="limitCheckboxGroup(this,5)"> <span><b>2. Leadership d'esempio</b></span></label>
-<label class="check skill-check"><input type="checkbox" name="E_SoftSkillsSelezionate" value="Valorizzazione dell'esperienza del team" onclick="limitCheckboxGroup(this,5)"> <span><b>3. Valorizzazione dell'esperienza del team</b></span></label>
-<label class="check skill-check"><input type="checkbox" name="E_SoftSkillsSelezionate" value="Comunicazione multilivello" onclick="limitCheckboxGroup(this,5)"> <span><b>4. Comunicazione multilivello</b></span></label>
-<label class="check skill-check"><input type="checkbox" name="E_SoftSkillsSelezionate" value="Ascolto attivo e validazione" onclick="limitCheckboxGroup(this,5)"> <span><b>5. Ascolto attivo e validazione</b></span></label>
-<label class="check skill-check"><input type="checkbox" name="E_SoftSkillsSelezionate" value="Delega strategica e supporto" onclick="limitCheckboxGroup(this,5)"> <span><b>6. Delega strategica e supporto</b></span></label>
-<label class="check skill-check"><input type="checkbox" name="E_SoftSkillsSelezionate" value="Mediazione e gestione dei conflitti" onclick="limitCheckboxGroup(this,5)"> <span><b>7. Mediazione e gestione dei conflitti</b></span></label>
-<label class="check skill-check"><input type="checkbox" name="E_SoftSkillsSelezionate" value="Negoziazione delle risorse" onclick="limitCheckboxGroup(this,5)"> <span><b>8. Negoziazione delle risorse</b></span></label>
-<label class="check skill-check"><input type="checkbox" name="E_SoftSkillsSelezionate" value="Empatia e conciliazione vita-lavoro" onclick="limitCheckboxGroup(this,5)"> <span><b>9. Empatia e conciliazione vita-lavoro</b></span></label>
-<label class="check skill-check"><input type="checkbox" name="E_SoftSkillsSelezionate" value="Gestione dello stress e sicurezza psicologica" onclick="limitCheckboxGroup(this,5)"> <span><b>10. Gestione dello stress e sicurezza psicologica</b></span></label>
+<label class="check skill-check"><input type="checkbox" name="E_SoftSkillsSelezionate" value="Dare una direzione chiara e guidare il cambiamento" onclick="limitCheckboxGroup(this,5)"> <span><b>1. Dare una direzione chiara e guidare il cambiamento</b></span></label>
+<label class="check skill-check"><input type="checkbox" name="E_SoftSkillsSelezionate" value="Dare l’esempio e agire con coerenza e integrità" onclick="limitCheckboxGroup(this,5)"> <span><b>2. Dare l’esempio e agire con coerenza e integrità</b></span></label>
+<label class="check skill-check"><input type="checkbox" name="E_SoftSkillsSelezionate" value="Coinvolgere, valorizzare e motivare le persone" onclick="limitCheckboxGroup(this,5)"> <span><b>3. Coinvolgere, valorizzare e motivare le persone</b></span></label>
+<label class="check skill-check"><input type="checkbox" name="E_SoftSkillsSelezionate" value="Comunicare in modo chiaro con persone e livelli diversi" onclick="limitCheckboxGroup(this,5)"> <span><b>4. Comunicare in modo chiaro con persone e livelli diversi</b></span></label>
+<label class="check skill-check"><input type="checkbox" name="E_SoftSkillsSelezionate" value="Ascoltare attivamente e considerare i punti di vista degli altri" onclick="limitCheckboxGroup(this,5)"> <span><b>5. Ascoltare attivamente e considerare i punti di vista degli altri</b></span></label>
+<label class="check skill-check"><input type="checkbox" name="E_SoftSkillsSelezionate" value="Collaborare e costruire fiducia nel gruppo" onclick="limitCheckboxGroup(this,5)"> <span><b>6. Collaborare e costruire fiducia nel gruppo</b></span></label>
+<label class="check skill-check"><input type="checkbox" name="E_SoftSkillsSelezionate" value="Delegare responsabilità e sostenere l’autonomia" onclick="limitCheckboxGroup(this,5)"> <span><b>7. Delegare responsabilità e sostenere l’autonomia</b></span></label>
+<label class="check skill-check"><input type="checkbox" name="E_SoftSkillsSelezionate" value="Gestire conflitti e mediare tra posizioni diverse" onclick="limitCheckboxGroup(this,5)"> <span><b>8. Gestire conflitti e mediare tra posizioni diverse</b></span></label>
+<label class="check skill-check"><input type="checkbox" name="E_SoftSkillsSelezionate" value="Negoziare priorità e risorse" onclick="limitCheckboxGroup(this,5)"> <span><b>9. Negoziare priorità e risorse</b></span></label>
+<label class="check skill-check"><input type="checkbox" name="E_SoftSkillsSelezionate" value="Comprendere emozioni e bisogni propri e altrui (empatia e consapevolezza emotiva)" onclick="limitCheckboxGroup(this,5)"> <span><b>10. Comprendere emozioni e bisogni propri e altrui (empatia e consapevolezza emotiva)</b></span></label>
+<label class="check skill-check"><input type="checkbox" name="E_SoftSkillsSelezionate" value="Prendere decisioni motivate e assumersene la responsabilità" onclick="limitCheckboxGroup(this,5)"> <span><b>11. Prendere decisioni motivate e assumersene la responsabilità</b></span></label>
+<label class="check skill-check"><input type="checkbox" name="E_SoftSkillsSelezionate" value="Adattarsi, imparare e risolvere problemi in situazioni nuove o complesse" onclick="limitCheckboxGroup(this,5)"> <span><b>12. Adattarsi, imparare e risolvere problemi in situazioni nuove o complesse</b></span></label>
+<label class="check skill-check"><input type="checkbox" name="E_SoftSkillsSelezionate" value="Gestire la pressione e favorire un clima in cui ci si può esprimere senza timore" onclick="limitCheckboxGroup(this,5)"> <span><b>13. Gestire la pressione e favorire un clima in cui ci si può esprimere senza timore</b></span></label>
 </div>
 
 <h3>Tre priorità e comportamenti associati</h3>
@@ -435,21 +442,21 @@ Il modulo non invia automaticamente le risposte a servizi esterni.
 
 <div class="skill-map">
 <label>Priorità 1
-<select name="E_Rank1"><option value="">—</option><option value="Change management e visione strategica">Change management e visione strategica</option><option value="Leadership d'esempio">Leadership d'esempio</option><option value="Valorizzazione dell'esperienza del team">Valorizzazione dell'esperienza del team</option><option value="Comunicazione multilivello">Comunicazione multilivello</option><option value="Ascolto attivo e validazione">Ascolto attivo e validazione</option><option value="Delega strategica e supporto">Delega strategica e supporto</option><option value="Mediazione e gestione dei conflitti">Mediazione e gestione dei conflitti</option><option value="Negoziazione delle risorse">Negoziazione delle risorse</option><option value="Empatia e conciliazione vita-lavoro">Empatia e conciliazione vita-lavoro</option><option value="Gestione dello stress e sicurezza psicologica">Gestione dello stress e sicurezza psicologica</option></select></label>
+<select name="E_Rank1"><option value="">—</option><option value="Dare una direzione chiara e guidare il cambiamento">Dare una direzione chiara e guidare il cambiamento</option><option value="Dare l’esempio e agire con coerenza e integrità">Dare l’esempio e agire con coerenza e integrità</option><option value="Coinvolgere, valorizzare e motivare le persone">Coinvolgere, valorizzare e motivare le persone</option><option value="Comunicare in modo chiaro con persone e livelli diversi">Comunicare in modo chiaro con persone e livelli diversi</option><option value="Ascoltare attivamente e considerare i punti di vista degli altri">Ascoltare attivamente e considerare i punti di vista degli altri</option><option value="Collaborare e costruire fiducia nel gruppo">Collaborare e costruire fiducia nel gruppo</option><option value="Delegare responsabilità e sostenere l’autonomia">Delegare responsabilità e sostenere l’autonomia</option><option value="Gestire conflitti e mediare tra posizioni diverse">Gestire conflitti e mediare tra posizioni diverse</option><option value="Negoziare priorità e risorse">Negoziare priorità e risorse</option><option value="Comprendere emozioni e bisogni propri e altrui (empatia e consapevolezza emotiva)">Comprendere emozioni e bisogni propri e altrui (empatia e consapevolezza emotiva)</option><option value="Prendere decisioni motivate e assumersene la responsabilità">Prendere decisioni motivate e assumersene la responsabilità</option><option value="Adattarsi, imparare e risolvere problemi in situazioni nuove o complesse">Adattarsi, imparare e risolvere problemi in situazioni nuove o complesse</option><option value="Gestire la pressione e favorire un clima in cui ci si può esprimere senza timore">Gestire la pressione e favorire un clima in cui ci si può esprimere senza timore</option></select></label>
 <label>Comportamenti associati
 <textarea name="E_Rank1_Comportamenti" placeholder="Azioni o comportamenti osservabili."></textarea></label>
 </div>
 
 <div class="skill-map">
 <label>Priorità 2
-<select name="E_Rank2"><option value="">—</option><option value="Change management e visione strategica">Change management e visione strategica</option><option value="Leadership d'esempio">Leadership d'esempio</option><option value="Valorizzazione dell'esperienza del team">Valorizzazione dell'esperienza del team</option><option value="Comunicazione multilivello">Comunicazione multilivello</option><option value="Ascolto attivo e validazione">Ascolto attivo e validazione</option><option value="Delega strategica e supporto">Delega strategica e supporto</option><option value="Mediazione e gestione dei conflitti">Mediazione e gestione dei conflitti</option><option value="Negoziazione delle risorse">Negoziazione delle risorse</option><option value="Empatia e conciliazione vita-lavoro">Empatia e conciliazione vita-lavoro</option><option value="Gestione dello stress e sicurezza psicologica">Gestione dello stress e sicurezza psicologica</option></select></label>
+<select name="E_Rank2"><option value="">—</option><option value="Dare una direzione chiara e guidare il cambiamento">Dare una direzione chiara e guidare il cambiamento</option><option value="Dare l’esempio e agire con coerenza e integrità">Dare l’esempio e agire con coerenza e integrità</option><option value="Coinvolgere, valorizzare e motivare le persone">Coinvolgere, valorizzare e motivare le persone</option><option value="Comunicare in modo chiaro con persone e livelli diversi">Comunicare in modo chiaro con persone e livelli diversi</option><option value="Ascoltare attivamente e considerare i punti di vista degli altri">Ascoltare attivamente e considerare i punti di vista degli altri</option><option value="Collaborare e costruire fiducia nel gruppo">Collaborare e costruire fiducia nel gruppo</option><option value="Delegare responsabilità e sostenere l’autonomia">Delegare responsabilità e sostenere l’autonomia</option><option value="Gestire conflitti e mediare tra posizioni diverse">Gestire conflitti e mediare tra posizioni diverse</option><option value="Negoziare priorità e risorse">Negoziare priorità e risorse</option><option value="Comprendere emozioni e bisogni propri e altrui (empatia e consapevolezza emotiva)">Comprendere emozioni e bisogni propri e altrui (empatia e consapevolezza emotiva)</option><option value="Prendere decisioni motivate e assumersene la responsabilità">Prendere decisioni motivate e assumersene la responsabilità</option><option value="Adattarsi, imparare e risolvere problemi in situazioni nuove o complesse">Adattarsi, imparare e risolvere problemi in situazioni nuove o complesse</option><option value="Gestire la pressione e favorire un clima in cui ci si può esprimere senza timore">Gestire la pressione e favorire un clima in cui ci si può esprimere senza timore</option></select></label>
 <label>Comportamenti associati
 <textarea name="E_Rank2_Comportamenti" placeholder="Azioni o comportamenti osservabili."></textarea></label>
 </div>
 
 <div class="skill-map">
 <label>Priorità 3
-<select name="E_Rank3"><option value="">—</option><option value="Change management e visione strategica">Change management e visione strategica</option><option value="Leadership d'esempio">Leadership d'esempio</option><option value="Valorizzazione dell'esperienza del team">Valorizzazione dell'esperienza del team</option><option value="Comunicazione multilivello">Comunicazione multilivello</option><option value="Ascolto attivo e validazione">Ascolto attivo e validazione</option><option value="Delega strategica e supporto">Delega strategica e supporto</option><option value="Mediazione e gestione dei conflitti">Mediazione e gestione dei conflitti</option><option value="Negoziazione delle risorse">Negoziazione delle risorse</option><option value="Empatia e conciliazione vita-lavoro">Empatia e conciliazione vita-lavoro</option><option value="Gestione dello stress e sicurezza psicologica">Gestione dello stress e sicurezza psicologica</option></select></label>
+<select name="E_Rank3"><option value="">—</option><option value="Dare una direzione chiara e guidare il cambiamento">Dare una direzione chiara e guidare il cambiamento</option><option value="Dare l’esempio e agire con coerenza e integrità">Dare l’esempio e agire con coerenza e integrità</option><option value="Coinvolgere, valorizzare e motivare le persone">Coinvolgere, valorizzare e motivare le persone</option><option value="Comunicare in modo chiaro con persone e livelli diversi">Comunicare in modo chiaro con persone e livelli diversi</option><option value="Ascoltare attivamente e considerare i punti di vista degli altri">Ascoltare attivamente e considerare i punti di vista degli altri</option><option value="Collaborare e costruire fiducia nel gruppo">Collaborare e costruire fiducia nel gruppo</option><option value="Delegare responsabilità e sostenere l’autonomia">Delegare responsabilità e sostenere l’autonomia</option><option value="Gestire conflitti e mediare tra posizioni diverse">Gestire conflitti e mediare tra posizioni diverse</option><option value="Negoziare priorità e risorse">Negoziare priorità e risorse</option><option value="Comprendere emozioni e bisogni propri e altrui (empatia e consapevolezza emotiva)">Comprendere emozioni e bisogni propri e altrui (empatia e consapevolezza emotiva)</option><option value="Prendere decisioni motivate e assumersene la responsabilità">Prendere decisioni motivate e assumersene la responsabilità</option><option value="Adattarsi, imparare e risolvere problemi in situazioni nuove o complesse">Adattarsi, imparare e risolvere problemi in situazioni nuove o complesse</option><option value="Gestire la pressione e favorire un clima in cui ci si può esprimere senza timore">Gestire la pressione e favorire un clima in cui ci si può esprimere senza timore</option></select></label>
 <label>Comportamenti associati
 <textarea name="E_Rank3_Comportamenti" placeholder="Azioni o comportamenti osservabili."></textarea></label>
 </div>
@@ -627,8 +634,15 @@ Il modulo non invia automaticamente le risposte a servizi esterni.
 <label class="check"><input type="checkbox" id="consent" required> Confermo di aver ricevuto l'informativa privacy prevista dal progetto. <b>Testo provvisorio da sostituire con l'informativa approvata.</b></label>
 <div id="success" class="statusbox"></div>
 
+<div class="mail-config">
+  <label><b>Email destinatario della ricerca</b> <span class="small">(facoltativa; se lasciata vuota potrà inserirla nell'app di posta)</span>
+  <input type="email" id="researchEmail" placeholder="es. ricerca@ente.it" autocomplete="email"></label>
+</div>
+
 <div class="actionbar">
-  <button type="button" id="shareBtn">Invia / condividi risposta compilata</button>
+  <button type="button" id="shareBtn">Condividi risposta</button>
+  <button type="button" class="alt" id="gmailBtn">Invia con Gmail</button>
+  <button type="button" class="alt" id="mailBtn">Invia con il programma di posta</button>
   <button type="button" class="alt" id="downloadBtn">Scarica risposta</button>
   <button type="button" class="alt" id="copyBtn">Copia risposta</button>
   <button type="button" class="alt" id="saveLocalBtn">Salva bozza sul dispositivo</button>
@@ -638,7 +652,7 @@ Il modulo non invia automaticamente le risposte a servizi esterni.
   <button type="button" class="alt" id="printBtn">Stampa / salva PDF</button>
 </div>
 <input id="draftFileInput" type="file" accept=".json,.txt,application/json,text/plain" style="display:none">
-<p class="mobile-note"><b>Su smartphone:</b> usi esclusivamente i pulsanti interni del questionario. Il normale comando Condividi del browser condivide la pagina, non le risposte digitate.</p>
+<p class="mobile-note"><b>Su smartphone:</b> usi preferibilmente <b>Condividi risposta</b> e scelga l’app di posta dal menu del dispositivo. Il normale comando Condividi del browser condivide la pagina, non le risposte digitate.</p>
 <div id="fallbackBox" class="fallback-box"><b>Copia manuale della risposta</b><p class="small">Se il download o la condivisione non sono disponibili, copi il testo seguente e lo salvi in un file di testo o in una mail.</p><textarea id="fallbackText" readonly></textarea></div>
 </div>
 </form>
@@ -646,9 +660,9 @@ Il modulo non invia automaticamente le risposte a servizi esterni.
 </div>
 
 <script>
-const FORM_VERSION = "v24";
-const DRAFT_KEY = "leadership_interview_draft_v24";
-const RESPONSE_SESSION_KEY = "leadership_interview_response_session_v24";
+const FORM_VERSION = "v26";
+const DRAFT_KEY = "leadership_interview_draft_v26";
+const RESPONSE_SESSION_KEY = "leadership_interview_response_session_v26";
 const MULTI_FIELDS = new Set(['E_SoftSkillsSelezionate','F2F3_Formazione','D_Vincoli','D_Resistenze']);
 let memoryDraft = null;
 
@@ -750,6 +764,63 @@ async function tryShareFile(text,name){
   }catch(e){ if(e && e.name==='AbortError') throw e; return false; }
 }
 
+
+const RESEARCH_EMAIL_KEY = "leadership_research_email_v26";
+
+function getResearchEmail(){
+  const el=document.getElementById('researchEmail');
+  return el ? el.value.trim() : '';
+}
+function rememberResearchEmail(){
+  const email=getResearchEmail();
+  if(email) safeSet(LOCAL_STORE,RESEARCH_EMAIL_KEY,email);
+}
+function emailSubject(row){
+  return `Questionario leadership – ${row.ResponseID}`;
+}
+function emailBody(row,name){
+  return [
+    'In allegato la risposta compilata al questionario Leadership.',
+    '',
+    `Codice risposta: ${row.ResponseID}`,
+    `File da allegare: ${name}`,
+    '',
+    'Il file è stato scaricato dal questionario web. Verificare che sia allegato prima dell’invio.'
+  ].join('\n');
+}
+function prepareEmailFile(){
+  const row=buildResponse(true); if(!row) return null;
+  const text=responsePayload(row), name=responseFilename(row);
+  const ok=downloadFile(name,text);
+  if(!ok){
+    showStatus('<b>Non è stato possibile scaricare il file.</b><br>Usi “Copia risposta” oppure riprovi con un altro browser.');
+    return null;
+  }
+  rememberResearchEmail();
+  return {row,text,name,email:getResearchEmail()};
+}
+function openGmail(){
+  const pack=prepareEmailFile(); if(!pack) return;
+  const url='https://mail.google.com/mail/?view=cm&fs=1'
+    +'&to='+encodeURIComponent(pack.email)
+    +'&su='+encodeURIComponent(emailSubject(pack.row))
+    +'&body='+encodeURIComponent(emailBody(pack.row,pack.name));
+  const w=window.open(url,'_blank','noopener');
+  if(w){
+    showStatus(`<b>File scaricato e Gmail aperto.</b><br>Alleghi manualmente <b>${pack.name}</b> alla mail prima dell’invio.`);
+  }else{
+    showStatus(`<b>File scaricato.</b><br>Il browser ha bloccato l’apertura di Gmail. Apra Gmail e alleghi <b>${pack.name}</b>.`);
+  }
+}
+function openMailClient(){
+  const pack=prepareEmailFile(); if(!pack) return;
+  const url='mailto:'+encodeURIComponent(pack.email)
+    +'?subject='+encodeURIComponent(emailSubject(pack.row))
+    +'&body='+encodeURIComponent(emailBody(pack.row,pack.name));
+  showStatus(`<b>File scaricato.</b><br>Si aprirà il programma di posta predefinito. Alleghi manualmente <b>${pack.name}</b> prima dell’invio.`);
+  setTimeout(()=>{ window.location.href=url; },50);
+}
+
 async function shareResponse(){
   const row=buildResponse(true); if(!row) return;
   const text=responsePayload(row), name=responseFilename(row);
@@ -758,7 +829,7 @@ async function shareResponse(){
     if(shared){showStatus(`<b>Risposta pronta.</b><br>Verifichi che nell’app scelta sia allegato <b>${name}</b> prima dell’invio.`);return;}
   }catch(e){if(e.name==='AbortError'){showStatus('<b>Condivisione annullata.</b><br>I dati restano nella pagina e nella bozza automatica.');return;}}
   const ok=downloadFile(name,text);
-  showStatus(ok?`<b>Condivisione file non disponibile.</b><br>È stato scaricato <b>${name}</b>. Lo alleghi manualmente alla mail.`:'<b>Download non disponibile.</b><br>La risposta è mostrata sotto per la copia manuale.');
+  showStatus(ok?`<b>Condivisione diretta non disponibile.</b><br>È stato scaricato <b>${name}</b>. Può usare “Invia con Gmail” o “Invia con il programma di posta” e allegare il file.`:'<b>Download non disponibile.</b><br>La risposta è mostrata sotto per la copia manuale.');
 }
 function downloadResponse(){
   const row=buildResponse(true); if(!row) return;
@@ -813,6 +884,8 @@ function activateRuntime(){
   form.addEventListener('input',scheduleAutosave,{passive:true});
   form.addEventListener('change',scheduleAutosave,{passive:true});
   document.getElementById('shareBtn').addEventListener('click',shareResponse);
+  document.getElementById('gmailBtn').addEventListener('click',openGmail);
+  document.getElementById('mailBtn').addEventListener('click',openMailClient);
   document.getElementById('downloadBtn').addEventListener('click',downloadResponse);
   document.getElementById('copyBtn').addEventListener('click',copyResponse);
   document.getElementById('saveLocalBtn').addEventListener('click',saveLocalDraft);
@@ -821,6 +894,12 @@ function activateRuntime(){
   document.getElementById('importDraftBtn').addEventListener('click',()=>document.getElementById('draftFileInput').click());
   document.getElementById('draftFileInput').addEventListener('change',e=>{importDraftFile(e.target.files&&e.target.files[0]);e.target.value='';});
   document.getElementById('printBtn').addEventListener('click',()=>window.print());
+  const researchEmail=document.getElementById('researchEmail');
+  if(researchEmail){
+    const savedEmail=safeGet(LOCAL_STORE,RESEARCH_EMAIL_KEY);
+    if(savedEmail) researchEmail.value=savedEmail;
+    researchEmail.addEventListener('change',rememberResearchEmail);
+  }
   const banner=document.getElementById('runtimeBanner');
   if(banner){
     if(location.protocol==='https:'){banner.className='runtime-banner ok';banner.innerHTML='<b>Funzioni attive via web.</b> Salvataggio, bozza ed esportazione sono disponibili in questo browser.';}
